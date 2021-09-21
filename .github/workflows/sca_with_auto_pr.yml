@@ -30,7 +30,7 @@ jobs:
       env: # Set the secret as an input
         # SCA agent activation token
         SRCCLR_API_TOKEN: ${{ secrets.SRCCLR_API_TOKEN }}
-        SRCCLR_SCM_TYPE: GITHUB
+        # SRCCLR_SCM_TYPE: GITHUB
         # See: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
         SRCCLR_SCM_TOKEN: ${{ secrets.SRCCLR_GITHUB_TOKEN }} 
         # Generate a pull request when libraries contain calls to vulnerable methods

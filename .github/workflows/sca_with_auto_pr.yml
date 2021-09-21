@@ -3,7 +3,7 @@
 
 # Requires the following secrets:
 # SRCCLR_API_TOKEN - generated when creating a new integration under the Agents tab
-# SCM_GITHUB - https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+# SRCCLR_GITHUB_TOKEN - https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
 # USER_EMAIL - email address, used in pull requests
 # USER_NAME - username, used in pull requests
 
@@ -26,7 +26,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: SCA Agent scan
-      if: ${{ secrets.SRCCLR_API_TOKEN }} &&  ${{ secrets.SRCCLR_GITHUB_TOKEN}}
+      # if: ${{ secrets.SRCCLR_API_TOKEN }} &&  ${{ secrets.SRCCLR_GITHUB_TOKEN}}
       env: # Set the secret as an input
         # SCA agent activation token
         SRCCLR_API_TOKEN: ${{ secrets.SRCCLR_API_TOKEN }}
